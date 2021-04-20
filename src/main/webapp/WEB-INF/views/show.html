@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+</head>
+<body> All users :
+<br/>
+<div th:each="person : ${people}">
+    <a th:href="@{/chat/show/{id}/(id=${person.getId()})}" th:text="${person.getName()}" >Edit</a>
+</div>
